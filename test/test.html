@@ -1,0 +1,65 @@
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.2.js"></script><style type="text/css" adt="123"></style>
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  <style type="text/css">
+    .d1{
+  position:relative;
+  background:#f00;
+  width:300px;
+  height:300px;
+  overflow:hidden;
+}
+.d2{
+  background:#0f0;
+  width:200px;
+  height:200px;
+  overflow:hidden;
+}
+
+.d3{
+  position:absolute;
+  background:#00f;
+  width:100px;
+  height:100px;
+  right:-50px;
+  bottom:50px;
+}
+
+.d4{
+  position:relative;
+  background:#900;
+  width:100px;
+  height:100px;
+  right:-150px;
+  bottom:-150px;
+}
+  </style>
+
+  <title></title>
+
+<script type="text/javascript">//<![CDATA[
+window.onload=function(){
+console.log($('.d3').position());
+console.log($('.d3').offset());
+console.log($('.d2').css('position'))
+}//]]> 
+
+</script>
+</head>
+
+<body>
+  <div class="d1">
+  <div class="d2">
+    <div class="d3">
+      D3
+    </div>
+    <div class="d4">
+    D4
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -6,6 +6,8 @@ if (typeof exports === 'object' && typeof exports.nodeName !== 'string' && typeo
 define(function(require, exports, module){
     var $ = require('jquery');
 
+    var stack = [];
+
     var isVisible = function(ele){
         ele = $(ele);
 
@@ -31,15 +33,21 @@ define(function(require, exports, module){
         //
         //
         //relative
+        //判断对象是否有overflow:hidden
         //
         //
+        //absolute 判断如果上一个元素在本元素中已经不可见了，即可直接返回false
         //
-        //absolut
-        //
-        //
+        if($(ele.parentNode).css('position') == 'static'){
+            stack.push(ele);
+        }
+        //overflow:hidden;不生效,display, visibility, opacity等生效
+        //一直到父对象是body或者父对象的position不为static
+        //判断与position不为static的父对象的相对位置
         //
         //fixed
         //
+        //判断与body的相对位置
         //
         //
         //
