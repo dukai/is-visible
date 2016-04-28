@@ -1,44 +1,92 @@
 <html><head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="googlebot" content="noindex, nofollow">
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.2.js"></script><style type="text/css" adt="123"></style>
-  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-  <style type="text/css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
+<style type="text/css">
+    *{
+        font-weight:bold;
+        font-size:16px;
+        font-family:'Microsoft YaHei';
+    }
+    .bgblue{
+        background:#f60 !important;
+    }
+    .box300{
+        width:300px;height:300px;
+    }
+    .box200{
+        width:200px;height:200px;
+    }
+    .box100{
+        width:100px;height:100px;
+    }
     .d1{
-  position:relative;
-  background:#f00;
-  width:300px;
-  height:300px;
-  overflow:hidden;
-}
-.d2{
-  background:#0f0;
-  width:200px;
-  height:200px;
-  overflow:hidden;
-}
+        position:relative;
+        background:#f00;
+        width:300px;
+        height:300px;
+        overflow:hidden;
+    }
+    .d2{
+        background:#0f0;
+        width:200px;
+        height:200px;
+        overflow:hidden;
+    }
 
-.d3{
-  position:absolute;
-  background:#00f;
-  width:100px;
-  height:100px;
-  right:-50px;
-  bottom:50px;
-}
+    .d3{
+        position:absolute;
+        background:#00f;
+        width:100px;
+        height:100px;
+        right:-50px;
+        bottom:50px;
+        color:#fff;
+    }
 
-.d4{
-  position:relative;
-  background:#900;
-  width:100px;
-  height:100px;
-  right:-150px;
-  bottom:-150px;
-}
-  </style>
+    .d4{
+        position:relative;
+        background:#900;
+        width:100px;
+        height:100px;
+        right:-190px;
+        bottom:-150px;
+        color:#fff;
+    }
+    .d5{
+        position:fixed;
+        right:-20px;
+        top:10px;
+        background:#06c;
+        color:#fff;
+    }
+    .d6{
+        margin: 10px;
+        background:#060;
+        color:#fff;
+    }
+    .d7,.d8{
+        float:left;
+        margin: 50px;
+        background:#f1e;
+    }
 
-  <title></title>
+    .d8{
+        position:relative;
+        left:50px;
+        top:-50px;
+        background:#ffa;
+    }
+    .d9{position:relative;}
+    .d10{
+        overflow:hidden;
+        background:#13f;
+        margin:20px;
+    }
+</style>
+
+<title></title>
 
 <script type="text/javascript">//<![CDATA[
 window.onload=function(){
@@ -47,19 +95,42 @@ console.log($('.d3').offset());
 console.log($('.d2').css('position'))
 }//]]> 
 
+
 </script>
 </head>
 
 <body>
-  <div class="d1">
-  <div class="d2">
-    <div class="d3">
-      D3
+    <div class="d1">
+        <div class="d2">
+            <div class="d3">
+                D3
+            </div>
+            <div class="d4">
+                D4
+            </div>
+        </div>
     </div>
-    <div class="d4">
-    D4
+    <div class="d1 bgblue">
+        <div class="d5 box100">D5</div>
+        <div class="d6 box100">D6</div>
     </div>
-  </div>
-</div>
+    <div class="d9 box300 bgblue">
+        <div class="d10 box200">
+            <div class="d7 box100">D7</div>
+            <div class="d8 box100">D8</div>
+        </div>
+    </div>
+<script src="http://cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+<script>
+    require(['../is-visible'], function(iv){
+        //console.log('d8', iv($('.d8')));
+        //console.log('d7', iv($('.d7')));
+        //console.log('d6', iv($('.d6')));
+        //console.log('d5', iv($('.d5')));
+        //console.log('d4', iv($('.d4')));
+        console.log('d3', iv($('.d3')));
+        //console.log('d2', iv($('.d2')));
+    });
+</script>
 </body>
 </html>
