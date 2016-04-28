@@ -4,11 +4,10 @@ if (typeof exports === 'object' && typeof exports.nodeName !== 'string' && typeo
     };
 }
 define(function(require, exports, module){
-    //var $ = require('jquery');
-
-    var stack = [];
+    var $ = require('jquery');
 
     // pos = {x, y, width, height}
+    // 判断两个矩形
     var isOverlap = function(pos1, pos2){
         if( pos1.x + pos1.width > pos2.x && pos2.x + pos2.width > pos1.x && 
             pos1.y + pos1.height > pos2.y && pos2.y + pos2.height > pos1.y){
@@ -30,7 +29,7 @@ define(function(require, exports, module){
             return false;
         }
     }
-
+    //获取对象的坐标以及宽高
     var getInfo = function($ele){
         var offset = $ele.offset();
         return {
@@ -54,7 +53,7 @@ define(function(require, exports, module){
         //当position是fixed的时候不受父对象影响，直接返回结果
         var elePosition = $ele.css('position');
         if(elePosition == 'fixed'){
-            return isOverlap(pos ? pos: getInfo($ele), 
+            return !!isOverlap(pos ? pos: getInfo($ele), 
                 {x: 0, y: $(window).scrollTop(), width:$(window).width(), height: $(window).height()});
         }
 
@@ -107,11 +106,8 @@ define(function(require, exports, module){
         //static
         //float or normal
         //
-        //
-        //
         //relative
         //判断对象是否有overflow:hidden
-        //
         //
         //absolute 判断如果上一个元素在本元素中已经不可见了，即可直接返回false
         //
@@ -122,8 +118,6 @@ define(function(require, exports, module){
         //fixed
         //
         //判断与body的相对位置
-        //
-        //
         //
         //如果父对象不是body继续比较，否则返回
 
