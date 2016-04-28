@@ -110,25 +110,18 @@
             <div class="d8 box100">D8</div>
         </div>
     </div>
-<script src="http://cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+    <script src="./visibility.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
 <script>
-	requirejs.config({
-		paths: {
-			jquery: 'http://cdn.bootcss.com/jquery/1.12.1/jquery.min'
-		}
-	});
-
-    require(['../is-visible'], function(iv){
-		var time1 = new Date().getTime();
-        console.log('d8', iv($('.d8')));
-        console.log('d7', iv($('.d7')));
-        console.log('d6', iv($('.d6')));
-        console.log('d5', iv($('.d5')));
-        console.log('d4', iv($('.d4')));
-        console.log('d3', iv($('.d3')));
-        console.log('d2', iv($('.d2')));
-		console.log(new Date().getTime() - time1);
-    });
+    var time1 = new Date().getTime();
+    console.log('d8',$('.d8')[0].isVisible());
+    console.log('d7',$('.d7')[0].isVisible());
+    console.log('d6',$('.d6')[0].isVisible());
+    console.log('d5',$('.d5')[0].isVisible());
+    console.log('d4',$('.d4')[0].isVisible());
+    console.log('d3',$('.d3')[0].isVisible());
+    console.log('d2',$('.d2')[0].isVisible());
+    console.log(new Date().getTime() - time1);
 </script>
 </body>
 </html>
