@@ -22,15 +22,18 @@ selector: string
 
 # Class 
 VisibleElement
--Constructor 
+- Constructor 
+
 VisibleElement(options)
 options => 
   element your selected element or selector
 
 - Method 
+
 stopTrack()
 stop tracking current element display status.
 - Events 
+
   show: when element show will triiger this event
 
 ## Examples
