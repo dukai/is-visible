@@ -1,0 +1,38 @@
+{
+  "name": "is-visible",
+  "description": "Detect whether is dom element is truly visible or not.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/dukai/is-visible",
+  "author": {
+    "name": "dukai",
+    "email": "dukai86@gmail.com",
+    "url": "http://www.dklogs.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://dukai@github.com/dukai/is-visible.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dukai/is-visible/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/dukai/is-visible/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "is-visible.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.5"
+  },
+  "keywords": []
+}
