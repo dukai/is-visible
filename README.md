@@ -1,26 +1,37 @@
 # is-visible
 
-Detect whether is dom element is truly visible or not.
+Detect whether is dom element is truly visible or not.(Don't support z-index check)
 
 ## Getting Started
-Install the module with: `npm install is-visible`
+Install the module with: `npm install git+https://github.com/dukai/is-visible`
 
 ```javascript
-var is_visible = require('is-visible');
-is_visible.awesome(); // "awesome"
+var visible = require('is-visible');
+visible.isVisible('.your-element-selector'); // will return true or false by your selected element truly display status
+new visible.VisibleElement('#your-element-selector').once('show', function(){
+  console.log('your element show');
+});
 ```
 
 ## Documentation
-_(Coming soon)_
+# method 
+isVisible(selector)
+detected whether your selected element is visible or not
+
+selector: string
 
 ## Examples
-_(Coming soon)_
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+```javascript
+var visible = require('is-visible');
+visible.isVisible('.your-element-selector'); // will return true or false by your selected element truly display status
+new visible.VisibleElement('#your-element-selector').once('show', function(){
+  console.log('your element show');
+});
+
 
 ## Release History
-_(Nothing yet)_
+1.0.0 init version
 
 ## License
 Copyright (c) 2016 dukai  
