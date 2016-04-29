@@ -19,7 +19,33 @@ define(function(require, exports, module){
             return false;
         }
 
-        //TODO: 比较父对象
+        //TODO: 比较父对象 如果不是body
+        //
+        //判断在父对象中的位置信息，确定是否可见
+        //
+        //判断position类型
+        //
+        //static
+        //float or normal
+        //
+        //
+        //
+        //relative
+        //
+        //
+        //
+        //absolut
+        //
+        //
+        //
+        //fixed
+        //
+        //
+        //
+        //
+        //如果父对象不是body继续比较，否则返回
+
+        return true;
 
     };
 
