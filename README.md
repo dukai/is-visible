@@ -1,6 +1,7 @@
 # is-visible
 
 Detect whether is dom element is truly visible or not.(Don't support z-index check)
+检查一个元素是否真正在页面中显示出来了。（尚不支持z-index判断）
 
 ## Getting Started
 Install the module with: `npm install git+https://github.com/dukai/is-visible`
