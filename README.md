@@ -28,7 +28,7 @@ visible.isVisible('.your-element-selector'); // will return true or false by you
 new visible.VisibleElement('#your-element-selector').once('show', function(){
   console.log('your element show');
 });
-
+```
 
 ## Release History
 1.0.0 init version
