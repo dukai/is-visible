@@ -18,11 +18,7 @@ new visible.VisibleElement('#your-element-selector').once('show', function(){
 ```
 
 ## Documentation 
-### method 
-`isVisible(selector)`
-detected whether your selected element is visible or not
-#### params 
-`selector`: string
+
 
 ### Class 
 
@@ -38,6 +34,12 @@ options
 
 `stopTrack()`  
 stop tracking current element display status.
+
+- StaticMethod 
+`isVisible(selector)`
+detected whether your selected element is visible or not
+#### params 
+`selector`: string
 
 - Events 
 
