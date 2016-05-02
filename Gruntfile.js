@@ -2,47 +2,68 @@
 
 module.exports = function(grunt) {
 
-  // Project configuration.
-  grunt.initConfig({
-    nodeunit: {
-      files: ['test/**/*_test.js'],
-    },
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      gruntfile: {
-        src: 'Gruntfile.js'
-      },
-      lib: {
-        src: ['lib/**/*.js']
-      },
-      test: {
-        src: ['test/**/*.js']
-      },
-    },
-    watch: {
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
-      },
-      lib: {
-        files: '<%= jshint.lib.src %>',
-        tasks: ['jshint:lib', 'nodeunit']
-      },
-      test: {
-        files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test', 'nodeunit']
-      },
-    },
-  });
+    var version = JSON.parse(grunt.file.read('./package.json')).version;
 
-  // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+    // Project configuration.
+    grunt.initConfig({
+        version: version,
+        nodeunit: {
+            files: ['test/**/*_test.js'],
+        },
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc'
+            },
+            gruntfile: {
+                src: 'Gruntfile.js'
+            },
+            lib: {
+                src: ['lib/**/*.js']
+            },
+            test: {
+                src: ['test/**/*.js']
+            },
+        },
+        watch: {
+            gruntfile: {
+                files: '<%= jshint.gruntfile.src %>',
+                tasks: ['jshint:gruntfile']
+            },
+            lib: {
+                files: '<%= jshint.lib.src %>',
+                tasks: ['jshint:lib', 'nodeunit']
+            },
+            test: {
+                files: '<%= jshint.test.src %>',
+                tasks: ['jshint:test', 'nodeunit']
+            },
+        },
 
-  // Default task.
-  grunt.registerTask('default', ['jshint', 'nodeunit']);
+        requirejs: {
+            default: {
+                options:{
+                    //appDir: '.',
+                    baseUrl: ".",
+                    //optimize: "none",
+                    paths: {
+                        //jquery: "http://cdn.bootcss.com/jquery/1.12.1/jquery.min",
+                        jquery: 'empty:',
+                        tools: 'empty:',
+                    },
+                    name: "visible-element",
+                    out: "dist/visible-element-<%= version %>.min.js"
+                }
+            }
+        }
+    });
+
+    // These plugins provide necessary tasks.
+    grunt.loadNpmTasks('grunt-contrib-nodeunit');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
+
+    // Default task.
+    grunt.registerTask('default', ['jshint', 'nodeunit']);
 
 };

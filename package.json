@@ -21,7 +21,7 @@
       "url": "https://github.com/dukai/is-visible/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "index.js",
+  "main": "visible-element.js",
   "engines": {
     "node": ">= 0.8.0"
   },
@@ -32,6 +32,7 @@
     "grunt": "~0.4.5",
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-requirejs": "^1.0.0",
     "grunt-contrib-watch": "~0.5.3",
     "nightmare": "^2.3.4"
   },
