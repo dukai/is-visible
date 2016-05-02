@@ -32,7 +32,8 @@
 <script>
 	requirejs.config({
 		paths: {
-			jquery: 'http://cdn.bootcss.com/jquery/1.12.1/jquery.min'
+            jquery: 'http://cdn.bootcss.com/jquery/1.12.1/jquery.min',
+            "visible-element": '../dist/visible-element-1.0.0.min'
         },
         packages: [
             {
@@ -43,7 +44,8 @@
         ]
 	});
 
-    require(['../is-visible'], function(iv){
+    require(['visible-element'], function(VE){
+        var iv = VE.isVisible;
 		var time1 = new Date().getTime();
         console.log('d8', iv($('.d8')));
         console.log('d7', iv($('.d7')));
@@ -53,9 +55,7 @@
         console.log('d3', iv($('.d3')));
         console.log('d2', iv($('.d2')));
 		console.log(new Date().getTime() - time1);
-    });
 
-    require(['../visible-element'], function(VE){
         console.log('start track d8');
         var ved8 = new VE({element: '.d8'});
         ved8.once('show', function(){
@@ -76,6 +76,7 @@
             console.log('d5 show');
         });
     });
+
 </script>
 </body>
 </html>
