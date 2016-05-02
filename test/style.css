@@ -1,0 +1,80 @@
+*{
+    font-weight:bold;
+    font-size:16px;
+    font-family:'Microsoft YaHei';
+}
+.bgblue{
+    background:#f60 !important;
+}
+.box300{
+    width:300px;height:300px;
+}
+.box200{
+    width:200px;height:200px;
+}
+.box100{
+    width:100px;height:100px;
+}
+.d1{
+    position:relative;
+    background:#f00;
+    width:300px;
+    height:300px;
+    overflow:hidden;
+}
+.d2{
+    background:#0f0;
+    width:200px;
+    height:200px;
+    overflow:hidden;
+}
+
+.d3{
+    position:absolute;
+    background:#00f;
+    width:100px;
+    height:100px;
+    right:-50px;
+    bottom:50px;
+    color:#fff;
+}
+
+.d4{
+    position:relative;
+    background:#900;
+    width:100px;
+    height:100px;
+    right:-190px;
+    bottom:-150px;
+    color:#fff;
+}
+.d5{
+    position:fixed;
+    right:-20px;
+    top:10px;
+    background:#06c;
+    color:#fff;
+}
+.d6{
+    margin: 10px;
+    background:#060;
+    color:#fff;
+}
+.d7,.d8{
+    float:left;
+    margin: 50px;
+    background:#f1e;
+}
+
+.d8{
+    position:relative;
+    left:50px;
+    top:-50px;
+    background:#ffa;
+}
+.d9{position:relative;}
+.d10{
+    overflow:hidden;
+    background:#13f;
+    margin:20px;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "is-visible",
+  "description": "Detect whether is dom element is truly visible or not.",
+  "main": "is-visible.js",
+  "authors": [
+    "dukai"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dukai/is-visible",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test/lib/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dtools": "git+https://github.com/dukai/dtools"
+  }
+}

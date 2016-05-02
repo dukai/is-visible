@@ -96,32 +96,6 @@ define(function(require, exports, module){
         }
 
         return true;
-
-        //TODO: 比较父对象 如果不是body
-        //
-        //判断在父对象中的位置信息，确定是否可见
-        //
-        //判断position类型
-        //
-        //static
-        //float or normal
-        //
-        //relative
-        //判断对象是否有overflow:hidden
-        //
-        //absolute 判断如果上一个元素在本元素中已经不可见了，即可直接返回false
-        //
-        //overflow:hidden;不生效,display, visibility, opacity等生效
-        //一直到父对象是body或者父对象的position不为static
-        //判断与position不为static的父对象的相对位置
-        //
-        //fixed
-        //
-        //判断与body的相对位置
-        //
-        //如果父对象不是body继续比较，否则返回
-
-
     };
 
     window.iv = module.exports = function(ele){
