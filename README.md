@@ -37,8 +37,8 @@ stop tracking current element display status.
 
 - StaticMethod 
 `isVisible(selector)`
-detected whether your selected element is visible or not
-#### params 
+detected whether your selected element is visible or not  
+params 
 `selector`: string
 
 - Events 
