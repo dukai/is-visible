@@ -47,5 +47,7 @@ define(function(require, exports, module){
 
     tools.extend(VisibleElement, tools.EventEmitter);
 
+    VisibleElement.isVisible = isVisible;
+
     module.exports = VisibleElement;
 });
