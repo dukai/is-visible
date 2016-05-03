@@ -10,11 +10,10 @@ Well jQuery is visible (`$('your-selector').is('visible')`) do not rellay know w
 Install the module with: `npm install git+https://github.com/dukai/is-visible`
 
 ```javascript
-var visible = require('is-visible');
-visible.isVisible('.your-element-selector'); // will return true or false by your selected element truly display status
-new visible.VisibleElement('#your-element-selector').once('show', function(){
+var Visible = require('is-visible');
+Visible.isVisible('.your-element-selector'); // will return true or false by your selected element truly display status
+new Visible('#your-element-selector').once('show', function(){
   console.log('your element show');
-});
 ```
 
 ## Documentation 
@@ -26,31 +25,31 @@ new visible.VisibleElement('#your-element-selector').once('show', function(){
 
 - Constructor 
 
-`VisibleElement(options)`  
-options  
-  element your selected element or selector
+    `VisibleElement(options)`  
+    options  
+    element your selected element or selector
 
 - Method 
 
-`stopTrack()`  
-stop tracking current element display status.
+    `stopTrack()`  
+    stop tracking current element display status.
 
-- StaticMethod 
-`isVisible(selector)`
-detected whether your selected element is visible or not  
-params 
-`selector`: string
+- StaticMethod  
+    `isVisible(selector)`
+    detected whether your selected element is visible or not  
+    params 
+    `selector`: string
 
 - Events 
 
-  show: when element show will triiger this event
+    show: when element show will triiger this event
 
 ## Examples
 
 ```javascript
-var visible = require('is-visible');
-visible.isVisible('.your-element-selector'); // will return true or false by your selected element truly display status
-new visible.VisibleElement('#your-element-selector').once('show', function(){
+var Visible = require('is-visible');
+Visible.isVisible('.your-element-selector'); // will return true or false by your selected element truly display status
+new Visible('#your-element-selector').once('show', function(){
   console.log('your element show');
 });
 ```
