@@ -50,8 +50,8 @@ module.exports = function(grunt) {
                         jquery: 'empty:',
                         tools: 'empty:',
                     },
-                    name: "visible-element",
-                    out: "dist/visible-element-<%= version %>.min.js"
+                    name: "is-visible",
+                    out: "./is-visible-<%= version %>.min.js"
                 }
             }
         }

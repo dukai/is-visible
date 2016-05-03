@@ -33,18 +33,21 @@
 	requirejs.config({
 		paths: {
             jquery: 'http://cdn.bootcss.com/jquery/1.12.1/jquery.min',
-            "visible-element": '../dist/visible-element-1.0.0.min'
+            'is-visible': '../is-visible-1.0.1.min'
         },
         packages: [
             {
                 name: 'tools',
                 location: './lib/dtools',
                 main: 'tools'
-            }
+            },
+            //{name: 'is-visible', location: '../', main: 'is-visible-1.0.1.min'}
+            //{name: 'is-visible', location: '../', main: 'index'}
         ]
 	});
 
-    require(['visible-element'], function(VE){
+    require(['is-visible'], function(VE){
+        console.log(VE);
         var iv = VE.isVisible;
 		var time1 = new Date().getTime();
         console.log('d8', iv($('.d8')));

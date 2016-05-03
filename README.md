@@ -7,7 +7,15 @@ Well jQuery is visible (`$('your-selector').is('visible')`) do not rellay know w
 检查一个元素在页面中的真实显示状态（支持position定位，float定位，margin等，尚不支持z-index判断）。jQuery中的is方法无法真正的判断一个元素是否显示，这个工具可以帮你做到，当你选择的元素是通过relative或者margin进行定位的时候，它的父对象又是overflow为hidden，你的元素可能就看不见了，这时jQuery不能处理，但是这个工具可以帮你判断。
 
 ## Getting Started
-Install the module with: `npm install git+https://github.com/dukai/is-visible`
+Install the module with: `bower install git+https://github.com/dukai/is-visible`
+
+Add  this to your requirejs config:
+
+``` javascript
+paths:{
+    'is-visible': 'your-path-to-lib/is-visible/is-visible-1.0.1.min'
+}
+```
 
 ```javascript
 var Visible = require('is-visible');
