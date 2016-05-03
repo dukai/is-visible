@@ -15,6 +15,7 @@
     "test",
     "tests",
     "index.js",
+    "lib",
     "is-visible.js",
     "visible-element.js",
     "package.json",
