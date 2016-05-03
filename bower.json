@@ -19,7 +19,8 @@
     "visible-element.js",
     "package.json",
     "LICENSE-MIT",
-    "README.md"
+    "README.md",
+    "Gruntfile.js"
   ],
   "dependencies": {
     "dtools": "git+https://github.com/dukai/dtools"
