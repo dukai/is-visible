@@ -21,7 +21,7 @@
       "url": "https://github.com/dukai/is-visible/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "visible-element.js",
+  "main": "is-visible.js",
   "engines": {
     "node": ">= 0.8.0"
   },
