@@ -1,7 +1,7 @@
 {
   "name": "is-visible",
   "description": "Detect whether is dom element is truly visible or not.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/dukai/is-visible",
   "author": {
     "name": "dukai",

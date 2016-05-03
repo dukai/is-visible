@@ -1,4 +1,6 @@
-<html><head>
+<!doctype html>
+<html>
+<head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
@@ -33,7 +35,7 @@
 	requirejs.config({
 		paths: {
             jquery: 'http://cdn.bootcss.com/jquery/1.12.1/jquery.min',
-            'is-visible': '../is-visible-1.0.1.min'
+            //'is-visible': '../is-visible-1.0.1.min'
         },
         packages: [
             {
@@ -42,7 +44,7 @@
                 main: 'tools'
             },
             //{name: 'is-visible', location: '../', main: 'is-visible-1.0.1.min'}
-            //{name: 'is-visible', location: '../', main: 'index'}
+            {name: 'is-visible', location: '../', main: 'is-visible'}
         ]
 	});
 

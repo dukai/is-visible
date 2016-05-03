@@ -16,7 +16,6 @@
     "tests",
     "index.js",
     "is-visible.js",
-    "lib",
     "visible-element.js",
     "package.json",
     "LICENSE-MIT",
